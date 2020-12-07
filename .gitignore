@@ -1,0 +1,6 @@
+virtualenv
+bookmarks/settings.py
+bookmarks/settings
+__pycache__
+*.pyc
+account/__pycache__
