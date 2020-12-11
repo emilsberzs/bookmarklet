@@ -2,6 +2,17 @@
 {% block title %}Dashboard{% endblock title %}
 {% block content %}
 <h1>Dashboard</h1>
-<p>Welcome to Your dashboard. You can <a href="{% url 'edit' %}">Edit Your profile</a> or
+
+{% with total_images_created=request.user.images_created.count %}
+<p>
+    Welcome to Your dashboard. You have bookmarked {{total_images_created}}
+    image{{total_images_created|pluralize}}.
+</p>
+{% endwith %}
+<p>Drag the following button to Your bookmarks toolbar to bookmark
+    images from other websites -->
+    <a href="javascript:{% include 'bookmarklet_launcher.js' %}" class="button">Bookmark it!</a></p>
+
+<p>You can <a href="{% url 'edit' %}">Edit Your profile</a> or
     <a href="{% url 'password_change'%}">Change Your password</a>.</p>
 {% endblock content %}

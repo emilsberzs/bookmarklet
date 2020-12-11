@@ -7,3 +7,6 @@ account/__pycache__
 account/__pycache__/admin.cpython-38.pyc
 account/__pycache__/models.cpython-38.pyc
 *.pyc
+cert.crt
+cert.key
+media/images
