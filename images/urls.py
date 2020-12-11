@@ -8,5 +8,6 @@ urlpatterns = [
     path('detail/<int:id>/<slug:slug>/',
          views.image_detail, name='detail'),
     path('like/', views.image_like, name='like'),
+    path('list/', views.image_list, name='list'),
 
 ]
